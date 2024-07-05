@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="/views/images/WhatsAppImage2024-06-24at7.11.12PM.jpeg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Blum || Inicio </title>
+  <link rel="stylesheet" href="/views/nicepage.css" media="screen">
+
+  <link rel="stylesheet" href="/views/Casa.css" media="screen">
+  <script class="u-script" type="text/javascript" src="/views/jquery.js" defer=""></script>
+  <script class="u-script" type="text/javascript" src="/views/nicepage.js" defer=""></script>
+
+
+
+
+
+
+
+  <meta data-intl-tel-input-cdn-path="intlTelInput/">
+</head>
+
+<body data-path-to-root="./" data-include-products="true" class="u-body u-xl-mode" data-lang="es">
+  <header class="u-clearfix u-header u-header" id="sec-9c34">
+    <nav class="u-menu u-menu-hamburger u-offcanvas u-menu-1" data-responsive-from="XL">
+      <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 500;">
+        <a class="u-button-style u-custom-active-color u-custom-border u-custom-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+          href="#" style="padding: 7px 23px; font-size: calc(1em + 13.2942px);">
+          <svg class="u-svg-link" viewBox="0 0 24 24">
+            <use xlink:href="#menu-hamburger"></use>
+          </svg>
+          <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px"
+            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <rect y="1" width="16" height="2"></rect>
+              <rect y="7" width="16" height="2"></rect>
+              <rect y="13" width="16" height="2"></rect>
+            </g>
+          </svg>
+        </a>
+      </div>
+ 
+      <div class="u-nav-container-collapse">
+        <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+          <div class="u-inner-container-layout u-sidenav-overflow">
+            <div class="u-menu-close"></div>
+            <% if (perfil==null) { %>
+              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/iniciosesion"
+                    style="padding: 10px 20px;">Inicio de sesión</a>
+                  <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/registro"
+                        style="padding: 10px 20px;">Registro</a>
+                      <% } else { %>
+                        <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                          <li class="u-nav-item"><a class="u-button-style u-nav-link" href="/logout"
+                              style="padding: 10px 20px;">Cerrar sesión</a></li>
+                        </ul>
+                        <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                          <li class="u-nav-item"><a <% if(perfil=='admin@admin.com' ) {%> href="/admin" <% } else { %>
+                                href="/perfil" <% } %> style="color:white;"><%= perfil %></a></li>
+                        </ul>
+                        <% } %>
+          </div>
+        </div>
+        <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+      </div>
+    </nav><img class="u-expanded-height u-image u-image-contain u-image-default u-preserve-proportions u-image-1"
+      src="/views/images/WhatsAppImage2024-06-24at7.11.12PM.jpeg" alt="" data-image-width="500" data-image-height="500">
+  </header>
+  <section
+    class="u-align-center u-clearfix u-image u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-section-1"
+    id="sec-6c81" data-image-width="1980" data-image-height="1114">
+    <div class="data-layout-selected u-clearfix u-gutter-0 u-layout-wrap u-layout-wrap-1">
+      <div class="u-layout">
+        <div class="u-layout-row">
+          <div
+            class="u-align-left u-container-style u-layout-cell u-left-cell u-shape-rectangle u-size-20-lg u-size-20-xl u-size-23-md u-size-23-sm u-size-23-xs u-size-xs-60 u-layout-cell-1"
+            src="/views/">
+            <div class="u-container-layout u-container-layout-1">
+              <h1 class="u-text u-text-body-alt-color u-text-1" data-animation-name="fadeIn"
+                data-animation-duration="1000" data-animation-direction="Left" data-animation-delay="250">Blum</h1>
+              <p class="u-text u-text-body-alt-color u-text-2" data-animation-name="fadeIn"
+                data-animation-duration="1000" data-animation-direction="Up" data-animation-delay="250">Comprometidos a capacitar e implementar medidas de apoyo y desarrollo a los estudiantes.</p>
+              <a href="/registro"
+                class="u-border-none u-btn u-btn-round u-button-style u-palette-3-base u-radius-10 u-text-palette-1-base u-btn-1"
+                data-animation-name="fadeIn" data-animation-duration="1000" data-animation-direction="Up"
+                data-animation-delay="500">Crear cuenta</a>
+            </div>
+          </div>
+          <div
+            class="u-align-center u-container-style u-image u-layout-cell u-right-cell u-size-37-md u-size-37-sm u-size-37-xs u-size-40-lg u-size-40-xl u-size-xs-60 u-image-1"
+            data-image-width="1422" data-image-height="900">
+            <div class="u-container-layout u-container-layout-2" src="/views/"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="u-align-center u-clearfix u-valign-middle u-white u-section-2" id="carousel_2f1f">
+    <div class="u-expanded-width u-gradient u-opacity u-opacity-55 u-shape u-shape-rectangle u-shape-1"
+      data-animation-name="rollIn" data-animation-duration="1000" data-animation-direction=""></div>
+    <div class="data-layout-selected u-clearfix u-gutter-40 u-layout-spacing-vertical u-layout-wrap u-layout-wrap-1">
+      <div class="u-gutter-0 u-layout">
+        <div class="u-layout-row">
+          <div class="u-size-31 u-size-60-md">
+            <div class="u-layout-col">
+              <div
+                class="u-container-style u-hidden-md u-hidden-sm u-hidden-xs u-layout-cell u-right-cell u-size-20 u-layout-cell-1"
+                wfd-invisible="true">
+                <div class="u-container-layout u-container-layout-1"></div>
+              </div>
+              <div
+                class="u-align-center u-container-style u-layout-cell u-radius-20 u-right-cell u-shape-round u-size-40 u-white u-layout-cell-2"
+                data-animation-name="fadeIn" data-animation-duration="1000" data-animation-direction="Left"
+                data-animation-delay="250">
+                <div class="u-container-layout u-valign-top u-container-layout-2">
+                  <img class="u-expanded-width u-image u-image-round u-radius-20 u-image-1" src="/views/images/bn.jpg"
+                    alt="" data-image-width="800" data-image-height="800" data-animation-name="fadeIn"
+                    data-animation-duration="2000" data-animation-direction="Left" data-animation-delay="250">
+                  <h5 class="u-text u-text-1">Formamos experiencias que contribuyen a tu futuro</h5>
+                  <p class="u-text u-text-2">Blum además de trabajar para y por los estudiantes, nos encargamos de que el proceso de adcripción sea cómodo y reconfortante.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="u-size-29 u-size-60-md">
+            <div class="u-layout-col">
+              <div
+                class="u-align-center u-container-style u-layout-cell u-left-cell u-radius-20 u-size-40 u-layout-cell-3"
+                data-animation-name="zoomIn" data-animation-duration="2000" data-animation-direction="">
+                <div
+                  class="u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-valign-top-lg u-valign-top-xl u-container-layout-3"
+                  src="/views/">
+                  <img class="u-image u-image-round u-radius-20 u-image-2" src="/views/images/kj.jpg"
+                    data-image-width="1200" data-image-height="1002" data-animation-name="fadeIn"
+                    data-animation-duration="1000" data-animation-direction="Right" data-animation-delay="250">
+                </div>
+              </div>
+              <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-20 u-white u-layout-cell-4">
+                <div class="u-container-layout u-valign-top u-container-layout-4">
+                  <h3 class="u-text u-text-default u-text-3">Buscamos expandirnos</h3>
+                  <p class="u-text u-text-4">No somos simplemente un proyecto en crecimiento; consideramos que la creciente demanda nos brinda mayores oportunidades. Actualmente, estamos en proceso de establecer convenios con diversas instituciones para expandir nuestros espacios y áreas de desarrollo.<br>
+                  </p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="u-align-center u-clearfix u-palette-3-base u-section-3" id="carousel_aed0">
+    <div class="u-gradient u-opacity u-opacity-55 u-shape u-shape-rectangle u-shape-1" data-animation-name="fadeIn"
+      data-animation-duration="1000" data-animation-direction="Left"></div>
+    <div class="u-list u-list-1">
+      <div class="u-repeater u-repeater-1">
+        <div class="u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white u-list-item-1"
+          data-animation-name="flipIn" data-animation-duration="1000" data-animation-direction="X"
+          data-animation-delay="250">
+          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+            <p class="u-text u-text-2" style="text-align: justify;">Creemos firmemente que todos los jóvenes merecen la oportunidad de desarrollar sus habilidades y experiencia.</p>
+          </div>
+        </div>
+        <div class="u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white"
+          data-animation-name="flipIn" data-animation-duration="1000" data-animation-direction="X"
+          data-animation-delay="250">
+          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+            <p class="u-text u-text-4" style="text-align: justify;">A menudo enfrentan dificultades al buscar pasantías que se alineen con sus intereses y objetivos profesionales.</p>
+          </div>
+        </div>
+        <div class="u-container-style u-list-item u-radius-20 u-repeater-item u-shape-round u-white"
+          data-animation-name="flipIn" data-animation-duration="1000" data-animation-direction="X"
+          data-animation-delay="250">
+          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+            <p class="u-text u-text-6" style="text-align: justify;">Existe una brecha entre las necesidades de los jóvenes y las instituciones públicas. Blum está comprometido en cerrar esa brecha y conectar a más jóvenes con oportunidades significativas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="u-gradient u-shape u-shape-circle u-shape-2" data-animation-name="customAnimation"
+      data-animation-duration="1000" data-animation-direction="" data-animation-delay="250"></div>
+  </section>
+  <section class="u-clearfix u-section-4" id="carousel_08cf">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <div
+        class="u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-gradient u-shape u-shape-rectangle u-shape-1">
+      </div>
+      <img class="u-align-left u-image u-image-round u-radius-20 u-image-1" data-image-width="900"
+        data-image-height="900" src="/views/images/5178414.jpg">
+      <div class="u-container-style u-grey-5 u-group u-radius-20 u-shape-round u-group-1">
+        <div
+          class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-container-layout-1">
+          <h3 class="u-align-left u-text u-text-default u-text-1">Tenemos buenas noticias para ti</h3>
+          <p class="u-align-left u-text u-text-2" style="text-align: justify;"> Si deseas unirte a nuestra organización, te invitamos a registrarte. Una vez registrado, comenzarás el proceso de selección basado en tus habilidades y cualidades. Completa nuestro formulario para que podamos conocerte mejor. </p>
+          </p>
+        </div>
+      </div>
+      <div class="u-gradient u-shape u-shape-circle u-shape-2"></div>
+    </div>
+  </section>
+  <section class="u-align-center u-clearfix u-grey-5 u-section-5" id="sec-686e">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <h2 class="u-text u-text-default u-text-1"> ¿Quiénes Somos?</h2>
+      <div class="u-list u-list-1">
+        <div class="u-repeater u-repeater-1">
+          <div
+            class="u-align-left u-container-style u-custom-item u-gradient u-list-item u-radius-20 u-repeater-item u-shape-round u-list-item-1">
+            <div class="u-container-layout u-similar-container u-container-layout-1">
+              <h4 class="u-custom-item u-text u-text-body-alt-color u-text-default u-text-2">Nuestro Trabajo</h4>
+              <p class="u-custom-item u-text u-text-body-alt-color u-text-default u-text-3" style="text-align: justify;">En Blum, somos una organización social sin fines de lucro que conecta a prestadores de servicio comunitario, pasantes y egresados universitarios con oportunidades en instituciones públicas.</p>
+            </div>
+          </div>
+          <div
+            class="u-align-left u-container-style u-custom-item u-list-item u-radius-20 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2">
+            <div class="u-container-layout u-similar-container u-container-layout-2">
+              <h4 class="u-custom-item u-text u-text-default u-text-4">Nuestra Misión</h4>
+              <p class="u-custom-item u-text u-text-default u-text-5" style="text-align: justify;">Ayudar a los jóvenes a desarrollar sus habilidades y experiencia, al mismo tiempo que contribuimos al bien común. En nuestra comunidad, aprovechamos cada una de las cualidades presentadas por nuestros miembros.</p>
+            </div>
+          </div>
+          <div
+            class="u-align-left u-container-style u-custom-item u-list-item u-radius-20 u-repeater-item u-shape-round u-video-cover u-white u-list-item-3">
+            <div class="u-container-layout u-similar-container u-container-layout-3">
+              <h4 class="u-custom-item u-text u-text-default u-text-6">¿Sabías que…?</h4>
+              <p class="u-custom-item u-text u-text-default u-text-7" style="text-align: justify;">La idea de Blum surgió de cinco estudiantes de sexto semestre de la Universidad Rómulo Gallegos. Su inquietud se originó en el proceso agobiante y poco funcional del servicio comunitario, y fue así como nació esta iniciativa.</p>
+            </div>
+          </div>
+          <div
+            class="u-align-left u-container-style u-custom-item u-gradient u-list-item u-radius-20 u-repeater-item u-shape-round u-video-cover u-list-item-4">
+            <div class="u-container-layout u-similar-container u-container-layout-4">
+              <h4 class="u-custom-item u-text u-text-body-alt-color u-text-default u-text-8">Nuestros Beneficios</h4>
+              <p class="u-custom-item u-text u-text-body-alt-color u-text-default u-text-9" style="text-align: justify;">Ofrecemos una plataforma gratuita donde los jóvenes pueden crear perfiles, buscar oportunidades y postularse a ellas. Además, brindamos asesoría y recursos para que los jóvenes puedan alcanzar el éxito en su desarrollo profesional.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="u-clearfix u-grey-5 u-section-6" id="sec-bf70">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-expanded-width-xs u-gradient u-shape u-shape-rectangle u-shape-1"></div>
+      <img class="u-expanded-width-xs u-image u-image-1" src="/views/images/nn.jpg" data-image-width="1080"
+        data-image-height="1080">
+      <div class="u-container-style u-group u-radius-20 u-shape-round u-white u-group-1">
+        <div class="u-container-layout u-valign-middle u-container-layout-1">
+          <h2 class="u-text u-text-1" >Ayudar a cada joven a encontrar y seguir su mejor camino de aprendizaje</h2>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="u-clearfix u-section-7" id="carousel_33aa">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <div class="u-clearfix u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            <div
+              class="u-align-left u-container-style u-layout-cell u-left-cell u-size-15 u-size-60-md u-layout-cell-1">
+              <div class="u-container-layout u-valign-top u-container-layout-1">
+                <h4 class="u-text u-text-1">En desarrollo...</h4>
+                <p class="u-text u-text-2" style="text-align: justify;"> <li>Estamos planeando expandir nuestra plataforma a nuevos países y regiones.</li>
+                  <li>Desarrollando nuevos programas y servicios para satisfacer las necesidades de los jóvenes y las instituciones públicas.</li>
+                  <li>Buscamos socios para ayudarnos a alcanzar nuestros objetivos de expansión.</li>
+                </p>
+              </div>
+            </div>
+            <div
+              class="u-align-left u-container-style u-layout-cell u-size-18-lg u-size-18-xl u-size-21-sm u-size-21-xs u-size-60-md u-layout-cell-2">
+              <div class="u-container-layout u-valign-bottom u-container-layout-2"><span
+                  class="u-icon u-text-palette-3-base u-icon-1"><svg class="u-svg-link"
+                    preserveAspectRatio="xMidYMin slice" viewBox="0 0 95.333 95.332">
+                    <use xlink:href="#svg-cbee"></use>
+                  </svg><svg class="u-svg-content" viewBox="0 0 95.333 95.332" x="0px" y="0px" id="svg-cbee">
+                    <g>
+                      <g>
+                        <path
+                          d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z">
+                        </path>
+                        <path
+                          d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z">
+                        </path>
+                      </g>
+                    </g>
+                  </svg></span>
+                <p class="u-text u-text-4"><center> Los hombres que intentan algo y fracasan son infinitamente mejores que aquellos que intentan no hacer nada y tienen exito... <strong>Lloyd Jones</strong></center>
+                 <span
+                    style="font-style: italic;"></span>
+                </p>
+              </div>
+            </div>
+            <div
+              class="u-align-center-sm u-align-center-xs u-container-style u-layout-cell u-right-cell u-size-24-sm u-size-24-xs u-size-27-lg u-size-27-xl u-size-60-md u-layout-cell-3">
+              <div class="u-container-layout u-valign-middle-md u-container-layout-3">
+                <div class="u-expanded-width u-gradient u-shape u-shape-rectangle u-shape-1"></div>
+                <img src="/views/images/ggg.jpg" alt="" class="u-align-left u-image u-image-default u-image-1"
+                  data-image-width="900" data-image-height="946">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="u-backlink u-clearfix u-grey-80">
+    <p class="u-text">
+      <span>Copyright© 2024 Blum. </span>
+    </p>
+  </section>
+
+</body>
+
+</html>
