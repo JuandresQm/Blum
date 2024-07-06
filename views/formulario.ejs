@@ -271,6 +271,9 @@
     </section>
     <div class="u-clearfix u-sheet u-block-e2d2-2">
       <h2 class="u-text u-text-default u-block-e2d2-35" >Bienvenido</h2>
+      <h4 class="u-text u-text-default u-block-e2d2-35"><% if (mensaje) { %>
+        <%= mensaje %>
+        <% } %>
 <h4 class="u-text u-text-default u-block-e2d2-35">Institución: <% if (datos) { %>
   <%= datos.institución %>
   <% } else {%>

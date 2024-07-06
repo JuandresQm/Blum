@@ -74,6 +74,144 @@ const sql = "UPDATE usuarios SET institución=? WHERE usuario_id=?"
         }
       }) 
   });
+  app.get('/adminEstatus', (req, res) => {
+    const adminToken = req.cookies.adminToken;
+  let usuario;
+    try {
+      if (adminToken) {
+        const decodedAdmin = jwt.verify(adminToken, process.env.JWT_SECRET);
+        usuario = decodedAdmin.correo;
+const sql2 = "SELECT  u.id, cedula, nombres, apellidos, telefono, areaInteres, institución, status, d.correo AS correo_usuario, c.nombre AS nombre_carrera FROM usuarios u JOIN datos d ON u.usuario_id = d.id JOIN carreras c ON u.carrera_id = c.id   ORDER BY status; ";
+const sql3 = "SELECT * FROM carreras";
+const sql4 = "SELECT * FROM instituciones";
+
+      db.all(sql2, (err, rows2) => {
+          if (err) {
+              console.error(err.message);
+          } else {
+
+
+              db.all(sql3, (err, rows3) => {
+                  if (err) {
+                      console.error(err.message);
+                  } else {
+
+
+                      db.all(sql4, (err, rows4) => {
+                          if (err) {
+                              console.error(err.message);
+                          } else {
+
+                              res.render('admin', {perfil: usuario, usuarios:rows2, carreras:rows3, instituciones:rows4});
+                          }
+                      });
+                  }
+              });
+          }
+      });
+
+        } else {
+          res.redirect('/iniciosesion');
+        }
+  } catch (error) {
+    res.redirect('/');
+  }
+    
+ 
+
+  });
+  app.get('/adminArea', (req, res) => {
+    const adminToken = req.cookies.adminToken;
+  let usuario;
+    try {
+      if (adminToken) {
+        const decodedAdmin = jwt.verify(adminToken, process.env.JWT_SECRET);
+        usuario = decodedAdmin.correo;
+const sql2 = "SELECT  u.id, cedula, nombres, apellidos, telefono, areaInteres, institución, status, d.correo AS correo_usuario, c.nombre AS nombre_carrera FROM usuarios u JOIN datos d ON u.usuario_id = d.id JOIN carreras c ON u.carrera_id = c.id   ORDER BY areaInteres; ";
+const sql3 = "SELECT * FROM carreras";
+const sql4 = "SELECT * FROM instituciones";
+
+      db.all(sql2, (err, rows2) => {
+          if (err) {
+              console.error(err.message);
+          } else {
+
+
+              db.all(sql3, (err, rows3) => {
+                  if (err) {
+                      console.error(err.message);
+                  } else {
+
+
+                      db.all(sql4, (err, rows4) => {
+                          if (err) {
+                              console.error(err.message);
+                          } else {
+
+                              res.render('admin', {perfil: usuario, usuarios:rows2, carreras:rows3, instituciones:rows4});
+                          }
+                      });
+                  }
+              });
+          }
+      });
+
+        } else {
+          res.redirect('/iniciosesion');
+        }
+  } catch (error) {
+    res.redirect('/');
+  }
+    
+ 
+
+  });
+  app.get('/adminIns', (req, res) => {
+    const adminToken = req.cookies.adminToken;
+  let usuario;
+    try {
+      if (adminToken) {
+        const decodedAdmin = jwt.verify(adminToken, process.env.JWT_SECRET);
+        usuario = decodedAdmin.correo;
+const sql2 = "SELECT  u.id, cedula, nombres, apellidos, telefono, areaInteres, institución, status, d.correo AS correo_usuario, c.nombre AS nombre_carrera FROM usuarios u JOIN datos d ON u.usuario_id = d.id JOIN carreras c ON u.carrera_id = c.id   ORDER BY institución; ";
+const sql3 = "SELECT * FROM carreras";
+const sql4 = "SELECT * FROM instituciones";
+
+      db.all(sql2, (err, rows2) => {
+          if (err) {
+              console.error(err.message);
+          } else {
+
+
+              db.all(sql3, (err, rows3) => {
+                  if (err) {
+                      console.error(err.message);
+                  } else {
+
+
+                      db.all(sql4, (err, rows4) => {
+                          if (err) {
+                              console.error(err.message);
+                          } else {
+
+                              res.render('admin', {perfil: usuario, usuarios:rows2, carreras:rows3, instituciones:rows4});
+                          }
+                      });
+                  }
+              });
+          }
+      });
+
+        } else {
+          res.redirect('/iniciosesion');
+        }
+  } catch (error) {
+    res.redirect('/');
+  }
+    
+ 
+
+  });
   app.get('/admin', (req, res) => {
     const adminToken = req.cookies.adminToken;
   let usuario;
@@ -149,19 +287,24 @@ const sql4 = "SELECT * FROM instituciones";
             if (err) {
               console.log(err);
             } else {
-
-                res.render("formulario", { perfil: usuario, usuarios:rows, carreras:rows2, datos:rows3});
+              mensajes = req.session.mensajes;
+                res.render("formulario", { perfil: usuario, usuarios:rows, carreras:rows2, datos:rows3, mensaje:mensajes});
+                req.session.destroy(err => {
+                  if (err) {
+                      console.error('Error al destruir la sesión:', err);
+                  } else {
              
+                  }
+              });
+              
             }
+            
           })
         }
       }) }})
     }
-    
   } catch (error) {
-    
   }
-
 
   });
   app.post('/perfil', (req, res) => {
@@ -195,8 +338,10 @@ const sql4 = "SELECT * FROM instituciones";
         if (err) {
 res.render("loginError");
           return console.error(err.message);
-        } else { 
-          res.redirect('/');
+        } else {
+          req.session.mensajes = '¡Datos registrados con éxito!\n Estás en proceso de selección...';
+
+          res.redirect('/perfil');
         }
       }) 
     } else {
@@ -207,7 +352,8 @@ res.render("loginError");
           res.render("loginError");
           return console.error(err.message);
         } else { 
-          res.redirect('/');
+          req.session.mensajes = '¡Datos actualizados con éxito!';
+          res.redirect('/perfil');
         }
       }) 
     }
